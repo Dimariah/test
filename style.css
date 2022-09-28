@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root {
+	--red: #B33C3C;
+	--lightRed: rgba(179, 60, 60, 0.25);
+}
+
+body {
+	font-family: 'Tajawal', sans-serif;
+	margin: 0;
+}
+
+header {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	align-items: center;
+	background: #FFF5F2;
+	padding-bottom: 20px;
+	box-shadow: 0px 0px 3px #888;
+}
+
+div.links {
+	display: flex;
+	width: 200px;
+	justify-content: space-around;
+	margin: 15px 10px 0 0;
+	justify-self: end;
+}
+
+nav {
+	width: 100%;
+	text-align: center;
+	margin-top: 15px;
+}
+
+h1 {
+	margin: 0;
+	margin-top: 8px;
+	font-size: 28px;
+}
+
+div.logo {
+	justify-self: center;
+}
+
+span {
+	color: var(--red);
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+li {
+	list-style: none;
+}
+
+ul li {
+	padding: 30px 0;
+	transition: all 0.15s linear;
+}
+
+ul {
+	list-style: none;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+nav a, ul a {
+	font-size: 14px;
+	letter-spacing: 3px;
+	color: #888;
+	font-family: 'Poppins', sans-serif;
+}
+
+nav span {
+	animation: GB 0.50s forwards;
+}
+
+@keyframes GB {
+	from {margin: 18px;}
+	to {margin-right: 15px;}
+}
+
+nav a:hover {
+	animation: spn 1s forwards;
+}
+
+@keyframes spn {
+	from {color: var(--lightRed);}
+	to {color: var(--red);}
+}
+
+li:hover {
+	padding-left: 20px;
+	color: var(--red);
+	background-color: var(--lightRed);
+}
+
+.except {
+	margin-right: 0;
+}
+
+div.links svg {
+	width: 18px;
+	fill: #B33C3C;
+	margin-top: 5px;
+}
+
+div.links svg:hover {
+	animation: fool 0.50s forwards;
+}
+
+@keyframes fool {
+	from {fill: var(--red);}
+	to {fill: #888;}
+}
+
+div.mobile svg {
+	width: 20px;
+}
+
+div.mobile {
+	display: none;
+	justify-content: space-between;
+	background: #FFF5F2;
+	padding-bottom: 22px;
+	box-shadow: 0px 0px 3px #888;
+}
+
+div.mobile div.logo {
+	margin-top: 2px;
+	margin-left: 12px;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+	margin: 15px 15px 0 0;
+	transform: rotate(0deg);
+	transition: transform 0.15s linear;
+}
+
+div.menu {
+	overflow: hidden;
+	height: 0;
+}
+
+.freeze {
+	transform: rotate(90deg);
+}
+
+@media screen and (max-width: 856px) {
+	header {
+		display: none;
+	}
+	div.mobile {
+		display: flex;
+	}
+	div.menu {
+		box-shadow: 0px 3px 3px #aaa;
+		height: 0px;
+		transition: all 0.15s linear;
+		overflow: hidden;
+	}
+	div.show-menu {
+		height: 324px;
+	}
+}
